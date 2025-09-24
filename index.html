@@ -5,93 +5,155 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thamires Cerqueira</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="assets/icone1.png" rel="icon">
+  <link href="assets/icone1.png" rel="icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo"><a href="#">thamirescerqueira</a></div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <nav class="menu" id="menu">
-      <a href="#sobre">Sobre</a>
-      <a href="#contato">Contato</a>
+  <header>
+    <nav class="navbar navbar-light bg-white fixed-top py-3">
+      <div class="container d-flex justify-content-between align-items-center position-relative">
+        
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold text-lowercase" href="index.html">thamirescerqueira</a>
+  
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Menu (sempre oculto até clicar) -->
+        <div class="collapse position-absolute mt-2 end-0" id="navbarMenu">
+          <ul class="navbar-nav p-3 rounded shadow-sm">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Contato</a>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
     </nav>
   </header>
+  
+  
+  
+  
+  
 
   <!-- HERO -->
-  <section class="hero">
+<section class="hero">
+  <div class="container px-4">
     <div class="text-container">
       <span class="pink-slash">/</span> olá.<br>
       meu nome é <strong>thamires cerqueira.</strong><br>
       sou <strong>copywriter & </strong><br>
       <strong>estrategista de conteúdo</strong>.<br>
-      <p class="scroll-down"><a href="#sobre">
-  confira.</a>
-  <a href="#portfolio" class="scroll-arrow-link">
-    <img src="assets/seta.png" alt="Seta" class="arrow-down" />
-  </a>
-</p>
+
+      <p class="scroll-down">
+        <a href="#sobre" class="scroll-link">
+          confira.
+          <img src="assets/seta.png" alt="Seta" class="arrow-down" />
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container px-4">
+      <div class="row align-items-center">
+        
+        <!-- Imagem à esquerda -->
+        <div class="col-md-5 mb-4 mb-md-0">
+          <img src="assets/imagens/Portfólio Thamires.png" alt="Foto de perfil" class="img-fluid rounded shadow">
+        </div>
+
+        <!-- Conteúdo à direita -->
+        <div class="col-md-7">
+          <h2 class="titulo-sobre">
+            <span class="barra">/</span>SOBRE MIM
+          </h2>
+          <p>
+            Sou uma profissional de marketing com foco em <strong>criação de conteúdo, comunicação estratégica</strong> e campanhas que geram <strong>resultado</strong>, e <strong>conexão</strong>. Já atuei com social media, inbound, branding e mais um pouco.
+          </p>
+          <p>
+            Curto boas ideias, mas gosto ainda mais quando elas entregam no final da campanha.
+          </p>
+          <p>
+            No fundo, acredito que toda marca tem uma história. A minha missão é ajudar a contar da melhor forma.
+          </p>
+          <p>
+            Aqui você encontra um pouco do que já criei, e do que posso fazer por novos projetos.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
-    <!-- SOBRE -->
-  <section id="sobre">
-    <!-- Conteúdo da seção sobre -->
-  </section>
-
+  <!-- PORTFOLIO -->
   <section class="portfolio">
+    <!-- Menu de filtros -->
     <div class="filter-menu" role="toolbar" aria-label="Filtros da galeria">
       <button type="button" class="active" data-filter="all">Todos</button>
       <button type="button" data-filter="digital">Digital</button>
       <button type="button" data-filter="projetos">Projetos</button>
     </div>
 
+    <!-- Galeria de projetos -->
     <div class="gallery">
-    <div class="item" data-category="digital">
-      <a href="projeto1.html">
-        <img src="assets/imagens/jeep.png" alt="Projeto Jeep">
-        <div class="overlay">
-          <h3>Títulos Jeep</h3>
-          <p>Projetos</p>
-        </div>
-      </a>
-    </div>
+      <div class="item" data-category="digital">
+        <a href="projeto1.html">
+          <img src="assets/imagens/jeep.png" alt="Projeto Jeep">
+          <div class="overlay">
+            <h3>Títulos Jeep</h3>
+            <p>Projetos</p>
+          </div>
+        </a>
+      </div>
 
-    <div class="item" data-category="projetos">
-      <a href="projeto1.html">
-        <img src="assets/imagens/mcdonalds.png" alt="Projeto McDonald's">
-        <div class="overlay">
-          <h3>Ideia Ativação - McDonald's</h3>
-          <p>Projetos</p>
-        </div>
-      </a>
-    </div>
+      <div class="item" data-category="projetos">
+        <a href="projeto1.html">
+          <img src="assets/imagens/mcdonalds.png" alt="Projeto McDonald's">
+          <div class="overlay">
+            <h3>Ideia Ativação - McDonald's</h3>
+            <p>Projetos</p>
+          </div>
+        </a>
+      </div>
 
-    <div class="item" data-category="projetos">
-      <a href="projeto1.html">
-        <img src="assets/imagens/Nike-longcopy-thamirescerqueira.png" alt="Projeto Nike">
-        <div class="overlay">
-          <h3>Texto Publicitário - Nike</h3>
-          <p>Projetos</p>
-        </div>
-      </a>
-    </div>
+      <div class="item" data-category="projetos">
+        <a href="projeto1.html">
+          <img src="assets/imagens/Nike-longcopy-thamirescerqueira.png" alt="Projeto Nike">
+          <div class="overlay">
+            <h3>Texto Publicitário - Nike</h3>
+            <p>Projetos</p>
+          </div>
+        </a>
+      </div>
 
-    <div class="item" data-category="projetos">
-      <a href="projeto1.html">
-        <img src="assets/imagens/oakley-copy-thamirescerqueira.png" alt="Projeto Oakley">
-        <div class="overlay">
-          <h3>Texto Publicitário - Oakley</h3>
-          <p>Projetos</p>
-        </div>
-      </a>
+      <div class="item" data-category="projetos">
+        <a href="projeto1.html">
+          <img src="assets/imagens/oakley-copy-thamirescerqueira.png" alt="Projeto Oakley">
+          <div class="overlay">
+            <h3>Texto Publicitário - Oakley</h3>
+            <p>Projetos</p>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-    <!-- CONTATO -->
+  <!-- CONTATO -->
   <section id="contato">
     <!-- Conteúdo da seção contato -->
   </section>
@@ -104,7 +166,8 @@
     </div>
   </footer>
 
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="script.js"></script>
 </body>
 </html>
