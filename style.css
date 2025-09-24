@@ -28,16 +28,14 @@ body {
 /* ==============================
    NAVBAR
 ============================== */
-/* Posiciona o menu abaixo do toggle */
 #navbarMenu {
-  top: 100%; /* exatamente abaixo do toggle */
-  right: 0;  /* alinhado à direita do toggle */
-  width: 200px; /* largura do menu */
+  top: 100%;
+  right: 0;
+  width: 200px;
   z-index: 1000;
   background-color: #f4f1e8;
 }
 
-/* Links do menu */
 #navbarMenu .nav-link {
   color: #000;
   font-weight: 600;
@@ -51,7 +49,6 @@ body {
   border-radius: 6px;
 }
 
-/* Certifica que o menu nunca aparece sem clicar */
 .collapse {
   display: none !important;
 }
@@ -64,7 +61,7 @@ body {
    HERO
 ============================== */
 .hero {
-  height: 80vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   padding: 100px 0;
@@ -82,7 +79,7 @@ body {
   font-weight: 900;
 }
 
-/* Scroll down (texto + seta) */
+/* Scroll down */
 .scroll-down {
   font-size: 2rem;
   color: #ccc;
@@ -109,8 +106,8 @@ body {
   margin-left: 4px;
   margin-top: 10px;
   position: absolute;
-  bottom: -30px; 
-  left: 70%;     
+  bottom: -30px;
+  left: 70%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
   transition: filter 0.3s;
@@ -128,7 +125,7 @@ body {
 /* ==============================
    SOBRE MIM
 ============================== */
-#sobre{
+#sobre {
   padding: 100px 40px;
 }
 
@@ -139,7 +136,7 @@ body {
 }
 
 .titulo-sobre .barra {
-  color: #ff007f; /* Rosa */
+  color: #ff007f;
   font-weight: bold;
 }
 
@@ -150,7 +147,6 @@ body {
   color: #333;
 }
 
-
 /* ==============================
    PORTFOLIO
 ============================== */
@@ -159,7 +155,6 @@ body {
   background: #f8f8f8;
 }
 
-/* Menu de filtros */
 .filter-menu {
   display: flex;
   gap: 16px;
@@ -184,7 +179,6 @@ body {
   color: #ff007f;
 }
 
-/* Galeria */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -269,12 +263,46 @@ body {
 ============================== */
 @media (max-width: 1024px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media (max-width: 640px) {
-  .gallery {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  /* HERO menor */
+  .text-container {
+    font-size: 2rem;
+  }
+  .arrow-down {
+    left: 50%;
+  }
+
+  /* SOBRE */
+  #sobre {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .titulo-sobre {
+    font-size: 3rem;
+  }
+  #sobre p {
+    font-size: 1rem;
+  }
+
+  /* PORTFOLIO */
+  .portfolio {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-container {
+    font-size: 1.6rem;
+  }
+  .titulo-sobre {
+    font-size: 2.2rem;
+  }
+  #sobre p {
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 }
