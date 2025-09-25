@@ -41,3 +41,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+
+document.querySelectorAll('.projeto-img').forEach((img, i) => {
+  img.addEventListener('click', () => {
+    let carousel = document.querySelector('#carouselLightbox');
+    let bsCarousel = bootstrap.Carousel.getInstance(carousel);
+    if (!bsCarousel) {
+      bsCarousel = new bootstrap.Carousel(carousel);
+    }
+    bsCarousel.to(i); // vai direto para o slide da imagem clicada
+  });
+});

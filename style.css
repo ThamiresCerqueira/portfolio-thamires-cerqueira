@@ -440,14 +440,20 @@ body {
 
   .titulo-contatos {
     font-size: 3.5rem;
+    text-align: center;
   }
 
   .linha-contato {
-    width: 90%;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .frase-contato {
     text-align: center;
+  }
+
+  .social-icon {
+    text-align:  center !important;
   }
 
   /* Coluna direita abaixo da frase */
