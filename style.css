@@ -141,7 +141,7 @@ body {
 }
 
 #sobre p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   margin-bottom: 16px;
   color: #333;
@@ -226,6 +226,11 @@ body {
   pointer-events: none;
 }
 
+.item .overlay h3 {
+  font-size: 25px;
+  text-align: center;
+}
+
 .item:hover .overlay {
   opacity: 1;
 }
@@ -235,27 +240,152 @@ body {
 }
 
 /* ==============================
+   SERVIÇOS
+============================== */
+#servicos {
+  padding: 100px 40px;
+}
+
+.titulo-servicos {
+  font-size: 6rem;
+  margin-bottom: 50px;
+  font-family: 'Brown Sugar', 'Inter', sans-serif;
+}
+
+.titulo-servicos .barra {
+  color: #f19e20;
+  font-weight: bold;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: #000 1px solid;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.icon-circle img {
+  width: 180%;
+  height: 180%;
+  object-fit: contain;
+}
+
+.nome-servico {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ==============================
+   CONTATOS
+============================== */
+#contatos {
+  padding: 100px 40px;
+}
+
+.titulo-contatos {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  font-family: 'Brown Sugar', 'Inter', sans-serif;
+}
+
+.titulo-contatos .barra {
+  color: #7ed957;
+  font-weight: bold;
+}
+
+.linha-contato {
+  border: 2px solid #ff007f;
+  width: 36%;
+}
+
+.frase-contato {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Ícones sociais horizontais */
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #333;
+}
+
+/* Ícones da direita verticais */
+.icon-pink {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ff007f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.icon-pink:hover {
+  background-color: #e91e63;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-text p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.contact-text .titulo {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* ==============================
    RODAPÉ
 ============================== */
 .footer {
-  background: white;
-  padding: 40px;
-  border-top: 1px solid #eee;
+  padding: 20px;
+  border-top: 1px solid #f4f1e8;
   text-align: center;
 }
 
 .footer-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   align-items: center;
   color: #333;
-  font-size: 0.9rem;
-}
-
-.footer-logo {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 0.8rem;
 }
 
 /* ==============================
@@ -291,6 +421,65 @@ body {
   /* PORTFOLIO */
   .portfolio {
     padding: 20px;
+  }
+
+  /* SERVIÇOS */
+  .titulo-servicos {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .col-12.col-md-4 {
+    justify-content: left;
+  }
+
+  /* CONTATOS */
+  #contatos {
+    padding: 80px 20px;
+  }
+
+  .titulo-contatos {
+    font-size: 3.5rem;
+  }
+
+  .linha-contato {
+    width: 90%;
+  }
+
+  .frase-contato {
+    text-align: center;
+  }
+
+  /* Coluna direita abaixo da frase */
+  .row.mt-5 {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .col-md-6.d-flex.flex-column {
+    margin-top: 30px;
+  }
+
+  .contact-text {
+    text-align: center !important;
+  }
+
+  .col-md-6.d-flex.justify-content-center {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .titulo-contatos {
+    font-size: 3rem;
+  }
+  .frase-contato {
+    font-size: 1rem;
+  }
+  .social-icon, .icon-pink {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
   }
 }
 
