@@ -72,6 +72,9 @@
    RESPONSIVO
 ============================== */
 @media (max-width: 768px) {
+  .titulo {
+    font-size: 4rem;
+  }
   .projeto-row {
     align-items: center;
   }
