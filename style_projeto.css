@@ -66,6 +66,10 @@
   margin-bottom: 15px;
 }
 
+.projeto-img:hover {
+  cursor: pointer;
+}
+
 /* Label "Board" */
 .board-label {
   position: absolute;

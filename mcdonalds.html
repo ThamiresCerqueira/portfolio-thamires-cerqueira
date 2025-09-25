@@ -63,8 +63,21 @@
 
         <!-- Imagem à esquerda -->
         <div class="col-md-5 position-relative mb-4 mb-md-0 d-flex align-items-center justify-content-center">
-            <img src="assets/imagens/mcdonalds.png" alt="Projeto Publicitário" class="img-fluid rounded shadow projeto-img">
+            <img src="assets/imagens/mcdonalds.png" alt="Projeto Publicitário" 
+                class="img-fluid rounded shadow projeto-img"
+                data-bs-toggle="modal" data-bs-target="#singleImageModal">
             <span class="board-label">Board</span>
+        </div>
+
+        <!-- Modal Lightbox Simples -->
+        <div class="modal fade" id="singleImageModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content bg-transparent border-0">
+                    <div class="modal-body p-0 d-flex justify-content-center">
+                        <img src="assets/imagens/mcdonalds.png" class="img-fluid rounded shadow" alt="Imagem">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Texto à direita -->
