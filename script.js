@@ -43,6 +43,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
+// aumenta imagem
 document.querySelectorAll('.projeto-img').forEach((img, i) => {
   img.addEventListener('click', () => {
     let carousel = document.querySelector('#carouselLightbox');
@@ -53,3 +54,22 @@ document.querySelectorAll('.projeto-img').forEach((img, i) => {
     bsCarousel.to(i); // vai direto para o slide da imagem clicada
   });
 });
+
+
+  // Seleciona o menu e o botão toggle
+  const navbarMenu = document.getElementById('navbarMenu');
+  const navbarToggler = document.querySelector('.navbar-toggler');
+
+  // Fecha o menu se clicar fora dele
+  document.addEventListener('click', function(event) {
+    const isClickInsideMenu = navbarMenu.contains(event.target);
+    const isClickOnToggler = navbarToggler.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnToggler) {
+      // Verifica se o menu está aberto
+      if (navbarMenu.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarMenu);
+        bsCollapse.hide(); // fecha o menu
+      }
+    }
+  });
