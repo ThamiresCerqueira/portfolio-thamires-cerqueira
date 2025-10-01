@@ -1,0 +1,96 @@
+.pt-navbar {
+  padding-top: 100px;
+}
+
+.titulo {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  font-family: 'Brown Sugar', 'Inter', sans-serif;
+}
+
+.titulo .barra-azul {
+  color: #0cc0df;
+  font-weight: bold;
+}
+
+
+/* Título e descrição do projeto */
+.projeto-titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #ff007f;
+}
+
+.projeto-descricao {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.boards {
+    color: #ff007f;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.projeto-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.projeto-img:hover {
+  cursor: pointer;
+  transform: scale(1) translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagens dentro do lightbox */
+#lightboxModal img {
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.6);
+}
+
+/* Navegação de projetos */
+.projeto-nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nav-projeto-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff007f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-projeto-link:hover {
+  color: #e91e63;
+}
+
+/* ==============================
+   RESPONSIVO
+============================== */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 4rem;
+  }
+  .projeto-row {
+    align-items: center;
+  }
+
+  .col-md-5, .col-md-7 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .board-label {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-projeto-link {
+    font-size: 1rem;
+  }
+}

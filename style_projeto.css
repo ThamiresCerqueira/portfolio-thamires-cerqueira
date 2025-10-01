@@ -1,0 +1,131 @@
+.pt-navbar {
+  padding-top: 100px;
+}
+
+.titulo {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  font-family: 'Brown Sugar', 'Inter', sans-serif;
+}
+
+.titulo .barra-azul {
+  color: #0cc0df;
+  font-weight: bold;
+}
+
+.titulo .barra-verde {
+  color: #7ed957;
+  font-weight: bold;
+}
+
+.titulo .barra-coral {
+  color: #ff5757;
+  font-weight: bold;
+}
+
+/* Linha do projeto ocupa altura do maior conteúdo */
+.projeto-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* garante altura igual */
+  margin: 0 -1rem; /* compensa padding das colunas */
+}
+
+/* Cada coluna com espaçamento interno */
+.projeto-row > .col-md-5,
+.projeto-row > .col-md-7 {
+  padding: 0 1rem; 
+}
+
+
+/* Imagem ocupa todo espaço vertical da coluna */
+.projeto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Texto verticalmente centralizado */
+.projeto-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Título e descrição do projeto */
+.projeto-titulo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ff007f;
+}
+
+.projeto-descricao {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.projeto-img:hover {
+  cursor: pointer;
+}
+
+/* Label "Board" */
+.board-label {
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  background-color: #ff007f;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Navegação de projetos */
+.projeto-nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nav-projeto-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff007f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-projeto-link:hover {
+  color: #e91e63;
+}
+
+/* ==============================
+   RESPONSIVO
+============================== */
+@media (max-width: 768px) {
+  .titulo{
+    font-size: 4rem;
+  }
+
+  .projeto-row {
+    align-items: center;
+  }
+
+  .col-md-5, .col-md-7 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .board-label {
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .nav-projeto-link {
+    font-size: 1rem;
+  }
+}

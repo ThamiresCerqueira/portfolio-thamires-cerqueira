@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thamires Cerqueira</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="assets/icone1.png" rel="icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-light bg-white fixed-top py-3">
+      <div class="container d-flex justify-content-between align-items-center position-relative">
+        
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold text-lowercase" href="index.html">thamirescerqueira</a>
+  
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Menu -->
+        <div class="collapse position-absolute mt-2 end-0" id="navbarMenu">
+          <ul class="navbar-nav p-3 rounded shadow-sm">
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contatos">Contato</a>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+    </nav>
+  </header>
+  
+  
+  
+  
+  
+
+  <!-- HERO -->
+<section class="hero">
+  <div class="container px-4">
+    <div class="text-container">
+      <span class="pink-slash">/</span> olá.<br>
+      meu nome é <strong>thamires cerqueira.</strong><br>
+      sou <strong>copywriter & </strong><br>
+      <strong>estrategista de conteúdo</strong>.<br>
+
+      <p class="scroll-down">
+        <a href="#sobre" class="scroll-link">
+          confira.
+          <img src="assets/seta.png" alt="Seta" class="arrow-down" />
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <div class="container px-4">
+      <div class="row align-items-center">
+        
+        <!-- Imagem à esquerda -->
+        <div class="col-md-5 mb-4 mb-md-0">
+          <img src="assets/imagens/Portfólio Thamires.png" alt="Foto de perfil" class="img-fluid rounded shadow">
+        </div>
+
+        <!-- Conteúdo à direita -->
+        <div class="col-md-7">
+          <h2 class="titulo-sobre">
+            <span class="barra">/</span>SOBRE MIM
+          </h2>
+          <p>
+            Sou uma profissional de marketing com foco em <strong>criação de conteúdo, comunicação estratégica</strong> e campanhas que geram <strong>resultado</strong>, e <strong>conexão</strong>. Já atuei com social media, inbound, branding e mais um pouco.
+          </p>
+          <p>
+            Curto boas ideias, mas gosto ainda mais quando elas entregam no final da campanha.
+          </p>
+          <p>
+            No fundo, acredito que toda marca tem uma história. A minha missão é ajudar a contar da melhor forma.
+          </p>
+          <p>
+            Aqui você encontra um pouco do que já criei, e do que posso fazer por novos projetos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <!-- Menu de filtros -->
+    <div class="filter-menu" role="toolbar" aria-label="Filtros da galeria">
+      <button type="button" class="active" data-filter="all">Todos</button>
+      <button type="button" data-filter="digital">Digital</button>
+      <button type="button" data-filter="projetos">Projetos</button>
+    </div>
+
+    <!-- Galeria de projetos -->
+    <div class="gallery">
+      <div class="item" data-category="projetos">
+        <a href="jeep.html">
+          <img src="assets/imagens/jeep.png" alt="Projeto Jeep">
+          <div class="overlay">
+            <h3>Títulos Jeep</h3>
+            <p>Projetos</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item" data-category="projetos">
+        <a href="mcdonalds.html">
+          <img src="assets/imagens/mequicaminhada.png" alt="Projeto McDonald's">
+          <div class="overlay">
+            <h3>Ideia Ativação - McDonald's</h3>
+            <p>Projetos</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item" data-category="projetos">
+        <a href="nike.html">
+          <img src="assets/imagens/Nike-longcopy-thamirescerqueira.png" alt="Projeto Nike">
+          <div class="overlay">
+            <h3>Texto Publicitário - Nike</h3>
+            <p>Projetos</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item" data-category="projetos">
+        <a href="oakley.html">
+          <img src="assets/imagens/oakley-copy-thamirescerqueira.png" alt="Projeto Oakley">
+          <div class="overlay">
+            <h3>Texto Publicitário - Oakley</h3>
+            <p>Projetos</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="item" data-category="projetos">
+        <a href="spotify.html">
+          <img src="assets/imagens/spotify.png" alt="Projeto Spotify">
+          <div class="overlay">
+            <h3>Texto Publicitário - Spotify</h3>
+            <p>Projetos</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <div class="container px-4">
+
+      <div class="row">
+        <div class="col-12">
+          <h2 class="titulo-servicos">
+            <span class="barra">/</span>Serviços
+          </h2>
+        </div>
+      </div>
+
+      <!-- Grid de serviços -->
+      <div class="row gy-5">
+
+        <div class="col-12 col-md-4 d-flex align-items-center">
+          <div class="icon-circle">
+            <img src="assets/gifs/criacao.gif" alt="Criação de conteúdo" />
+          </div>
+          <span class="nome-servico">Criação de conteúdo</span>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex align-items-center">
+          <div class="icon-circle">
+            <img src="assets/gifs/copy.gif" alt="Copys e Roteiros" />
+          </div>
+          <span class="nome-servico">Copys e Roteiros</span>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex align-items-center">
+          <div class="icon-circle">
+            <img src="assets/gifs/branding.gif" alt="Branding e Marketing" />
+          </div>
+          <span class="nome-servico">Branding e Marketing</span>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex align-items-center">
+          <div class="icon-circle">
+            <img src="assets/gifs/estrategia.gif" alt="Estratégia e Planejamento " />
+          </div>
+          <span class="nome-servico">Estratégia e Planejamento</span>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex align-items-center">
+          <div class="icon-circle">
+            <img src="assets/gifs/social.gif" alt="Social media" />
+          </div>
+          <span class="nome-servico">Social media</span>
+        </div>
+
+        <div class="col-12 col-md-4 d-flex align-items-center">
+          <div class="icon-circle">
+            <img src="assets/gifs/ui-ux.gif" alt="UX/UI" />
+          </div>
+          <span class="nome-servico">UX/UI design</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contatos">
+    <div class="container px-4">
+
+      <!-- Título -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <h2 class="titulo-contatos">
+            <span class="barra">/</span>Contatos
+          </h2>
+          <div class="linha-contato"></div>
+          <p class="frase-contato mt-3">Entre em contato comigo pelas redes ou informações abaixo</p>
+        </div>
+      </div>
+
+      <div class="row align-items-start">
+        <!-- Ícones sociais horizontais (lado esquerdo) -->
+        <div class="col-md-6 d-flex gap-3 mb-5 mb-md-0 justify-content-center justify-content-md-start">
+          <a href="https://www.linkedin.com/in/thamires-cerqueira/" class="icon-circle social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/thamirescerqueira/" class="icon-circle social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://codigodacomunicacao.substack.com" class="icon-circle social-icon">
+            <i class="fa fa-blog"></i>
+          </a>
+        </div>
+
+        <!-- COLUNA "INVISÍVEL"  -->
+        <div class="col-md-1 d-none d-md-block"></div>
+
+        <!-- Ícones da direita -->
+        <div class="col-md-5 d-flex flex-column align-items-start">
+          <div class="contact-item d-flex align-items-center mb-3">
+            <div class="icon-circle icon-pink me-3">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text text-start">
+              <p class="titulo">ENDEREÇO</p>
+              <p>Rio de Janeiro</p>
+            </div>
+          </div>
+
+          <div class="contact-item d-flex align-items-center mb-3">
+            <div class="icon-circle icon-pink me-3">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text text-start">
+              <p class="titulo">E-MAIL</p>
+              <p>thamires.szcerqueira@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item d-flex align-items-center">
+            <div class="icon-circle icon-pink me-3">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text text-start">
+              <p class="titulo">TELEFONE</p>
+              <p>(21) 99658-6301</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© Copyright 2025. Desenvolvido por Thamires Cerqueira.</p>
+      <p>Marketing, conteúdo e estratégia em desordem criativa.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
