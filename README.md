@@ -33,10 +33,3 @@ Portfólio moderno, responsivo e interativo de **Thamires Cerqueira**, com foco 
    - Seção de Serviços aprimorada com os GIFs animados e detalhamento de entregáveis.
 
 ---
-
-
-## 🌐 Publicação no GitHub Pages
-
-O projeto está pronto para publicação:
-- `index.html` na raiz do repositório garante funcionamento imediato.
-- Caminhos relativos testados para compatibilidade total com repositórios GitHub Pages.
