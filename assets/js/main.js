@@ -143,7 +143,7 @@ function renderProjects(filter) {
     grid.innerHTML = '';
 
     filtered.forEach((project, index) => {
-      const isFeatured = project.id === 'bancou';
+      const isFeatured = project.id === 'myclosett';
       const card = document.createElement('article');
       card.className = `project-card ${isFeatured ? 'featured-card' : ''} reveal-on-scroll is-revealed`;
       card.dataset.id = project.id;
