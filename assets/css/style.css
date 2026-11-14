@@ -700,6 +700,7 @@ button {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1.15fr 1fr;
+  width: 100%;
 }
 
 .project-thumb-wrap {
@@ -1483,18 +1484,106 @@ button {
 }
 
 /* ==============================================================================
-   RESPONSIVIDADE / MEDIA QUERIES
+   BOTÃO DE DOWNLOAD DO CURRÍCULO
    ============================================================================== */
+.nav-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-cv-btn {
+  background: transparent;
+  color: var(--text-main);
+  border: 1.5px solid #cbd5e1;
+  padding: 0.52rem 1.15rem;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-normal);
+  text-decoration: none;
+}
+
+.nav-cv-btn:hover {
+  border-color: var(--primary-pink);
+  color: var(--primary-pink);
+  transform: translateY(-2px);
+  background: rgba(255, 0, 127, 0.05);
+}
+
+.mobile-cv-btn {
+  background: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  color: var(--text-main);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: var(--transition-normal);
+  margin-top: 0.25rem;
+}
+
+.mobile-cv-btn:hover {
+  border-color: var(--primary-pink);
+  color: var(--primary-pink);
+  background: #fff;
+}
+
+.sobre-actions {
+  margin-top: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ==============================================================================
+   RESPONSIVIDADE REFINADA & ALINHAMENTO
+   ============================================================================== */
+
+/* Notebooks e Telas Médias (<= 1100px) */
+@media (max-width: 1100px) {
+  .nav-links {
+    gap: 1.2rem;
+  }
+  .sobre-grid {
+    grid-template-columns: 360px 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Tablets em Orientação Paisagem / Telas Compactas (<= 1024px) */
 @media (max-width: 1024px) {
   .sobre-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
   .sobre-photo-card img {
-    height: 400px;
+    height: 420px;
+    max-height: 50vh;
   }
+  .project-card.featured-card,
   .featured-card {
-    grid-template-columns: 1fr;
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+  }
+  .featured-card .project-thumb-wrap {
+    width: 100% !important;
+    min-height: 280px;
+    max-height: 380px;
+    aspect-ratio: 16 / 9;
+  }
+  .featured-card .project-content {
+    width: 100% !important;
+    padding: 1.8rem;
   }
   .contatos-wrapper {
     grid-template-columns: 1fr;
@@ -1507,15 +1596,18 @@ button {
   }
 }
 
-@media (max-width: 768px) {
-  .nav-links, .nav-cta-btn {
-    display: none;
+/* Breakpoint do Menu e Telas Mobile (<= 860px) */
+@media (max-width: 860px) {
+  .nav-links, 
+  .nav-actions-group, 
+  .nav-cta-btn {
+    display: none !important;
   }
   .menu-toggle {
     display: flex;
   }
-  
-  /* Menu Mobile */
+
+  /* Gaveta do Menu Mobile */
   .mobile-menu-drawer {
     position: fixed;
     top: 65px;
@@ -1527,7 +1619,7 @@ button {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.85rem;
     transform: translateY(-120%);
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 999;
@@ -1540,28 +1632,180 @@ button {
     padding: 0.5rem 0;
   }
 
+  /* Seções e Espaçamentos */
   .hero-section {
-    padding-top: 100px;
+    padding-top: 105px;
+    padding-bottom: 50px;
   }
-  .hero-greeting {
-    font-size: 2.2rem;
+  .section-sobre,
+  .section-servicos {
+    padding: 70px 1.5rem;
   }
-  .section-title {
-    font-size: 3rem;
+  .section-portfolio,
+  .section-contatos {
+    padding: 70px 1.5rem 85px;
   }
+
   .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  .servicos-grid {
     grid-template-columns: 1fr;
   }
   .sobre-stats-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Smartphones e Telas Pequenas (<= 640px) */
+@media (max-width: 640px) {
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-greeting {
+    font-size: clamp(2rem, 7vw, 2.5rem);
+    letter-spacing: -1px;
+    text-align: center;
+  }
+  .hero-subtext {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: clamp(2.4rem, 8.5vw, 3.2rem);
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Hero Actions */
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.9rem;
+  }
+  .hero-actions a {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hero Pills Centralizadas */
+  .hero-pills-bar {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    margin-bottom: 1.8rem;
+  }
+  .hero-pill {
+    font-size: 0.82rem;
+    padding: 0.4rem 0.85rem;
+  }
+
+  /* Indicador de scroll centralizado */
+  .hero-scroll-indicator {
+    justify-content: center;
+  }
+
+  /* Card Featured (My Closett) no mobile */
+  .project-card.featured-card,
+  .featured-card {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .featured-card .project-thumb-wrap {
+    width: 100% !important;
+    min-height: 220px !important;
+    max-height: 300px !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+  .featured-card .project-content {
+    width: 100% !important;
+    padding: 1.4rem !important;
+  }
+  .featured-card .project-title {
+    font-size: 1.4rem;
+  }
+  .project-title {
+    font-size: 1.25rem;
+  }
+  .portfolio-filter-bar {
+    gap: 8px;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* Sobre Mim */
+  .sobre-floating-tag {
+    position: static;
+    margin-top: 12px;
+    width: fit-content;
+  }
+  .sobre-actions {
+    width: 100%;
+  }
+  .sobre-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+  .sobre-text-block p {
+    font-size: 1.05rem;
+  }
+
+  /* Contatos */
+  .contatos-wrapper {
+    padding: 1.6rem 1.2rem;
+  }
+  .contatos-cta-text h3 {
+    font-size: 1.65rem;
+  }
+  .direct-card {
+    padding: 1rem;
+    gap: 0.85rem;
+  }
+  .direct-icon-circle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 1.05rem;
+  }
+  .direct-val {
+    font-size: 0.92rem;
+    word-break: break-all;
+  }
+
+  /* Modal */
+  .project-modal-backdrop {
+    padding: 10px;
+  }
+  .project-modal-window {
+    max-height: 94vh;
+  }
   .modal-header-bar {
-    padding: 1rem 1.2rem;
+    padding: 0.85rem 1rem;
   }
   .modal-body-scrollable {
-    padding: 1.2rem;
+    padding: 1rem;
+    gap: 1.5rem;
   }
   .modal-project-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+  }
+  .modal-footer-nav {
+    padding: 0.75rem 1rem;
+  }
+  .modal-nav-project-btn {
+    font-size: 0.78rem;
   }
 }
