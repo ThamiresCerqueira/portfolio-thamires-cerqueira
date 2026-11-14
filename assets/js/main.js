@@ -245,21 +245,50 @@ function openProjectModal(projectId) {
   document.querySelector('#modalClient').textContent = `${project.client} • ${project.categoryLabel}`;
   document.querySelector('#modalTitle').textContent = project.title;
 
-  // Preenche Desafio
-  document.querySelector('#modalChallenge').textContent = project.challenge;
+  // Preenche Desafio / Resumo
+  const challengeBlock = document.querySelector('#modalChallenge') ? document.querySelector('#modalChallenge').closest('.modal-section-block') : null;
+  const strategyBlock = document.querySelector('#modalStrategy') ? document.querySelector('#modalStrategy').closest('.modal-section-block') : null;
+  const deliverablesBlock = document.querySelector('#modalDeliverables') ? document.querySelector('#modalDeliverables').closest('.modal-section-block') : null;
+
+  if (project.challenge) {
+    if (challengeBlock) {
+      challengeBlock.style.display = 'block';
+      challengeBlock.querySelector('h4').innerHTML = '<i class="fas fa-bullseye"></i> O Desafio';
+    }
+    document.querySelector('#modalChallenge').textContent = project.challenge;
+  } else if (project.summary) {
+    if (challengeBlock) {
+      challengeBlock.style.display = 'block';
+      challengeBlock.querySelector('h4').innerHTML = '<i class="fas fa-align-left"></i> Visão Geral & Contexto';
+    }
+    document.querySelector('#modalChallenge').textContent = project.summary;
+  } else {
+    if (challengeBlock) challengeBlock.style.display = 'none';
+  }
 
   // Preenche Estratégia
-  document.querySelector('#modalStrategy').textContent = project.strategy;
+  if (project.strategy) {
+    if (strategyBlock) {
+      strategyBlock.style.display = 'block';
+      strategyBlock.querySelector('h4').innerHTML = '<i class="fas fa-compass"></i> A Estratégia';
+    }
+    document.querySelector('#modalStrategy').textContent = project.strategy;
+  } else {
+    if (strategyBlock) strategyBlock.style.display = 'none';
+  }
 
   // Preenche Entregáveis
   const deliverablesList = document.querySelector('#modalDeliverables');
   deliverablesList.innerHTML = '';
   if (project.deliverables && project.deliverables.length) {
+    if (deliverablesBlock) deliverablesBlock.style.display = 'block';
     project.deliverables.forEach(item => {
       const li = document.createElement('li');
-      li.innerHTML = `<i class="fas fa-check-circle"></i> <span>${item}</span>`;
+      li.innerHTML = '<i class="fas fa-check-circle"></i> <span>' + item + '</span>';
       deliverablesList.appendChild(li);
     });
+  } else {
+    if (deliverablesBlock) deliverablesBlock.style.display = 'none';
   }
 
   // Preenche Resultados
